@@ -1,0 +1,15 @@
+use 5.008007;
+use ExtUtils::MakeMaker;
+# See lib/ExtUtils/MakeMaker.pm for details of how to influence
+# the contents of the Makefile that is written.
+WriteMakefile(
+    NAME              => 'MP3::CreateInlayCard',
+    VERSION_FROM      => 'lib/MP3/CreateInlayCard.pm', # finds $VERSION
+    PREREQ_PM         => 
+		{ HTML::Template => 0, MP3::Tag => 0, File::Recurse => 0 },
+    ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
+      (ABSTRACT_FROM  => 'lib/MP3/CreateInlayCard.pm',
+       AUTHOR         => 'David Precious <davidp@preshweb.co.uk>') : ()),
+);
+
+# $Id: Makefile.PL 112 2007-02-10 22:37:41Z davidp $
