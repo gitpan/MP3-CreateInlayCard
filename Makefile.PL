@@ -1,4 +1,4 @@
-use 5.008007;
+use 5.008000;
 use ExtUtils::MakeMaker;
 # See lib/ExtUtils/MakeMaker.pm for details of how to influence
 # the contents of the Makefile that is written.
@@ -12,4 +12,4 @@ WriteMakefile(
        AUTHOR         => 'David Precious <davidp@preshweb.co.uk>') : ()),
 );
 
-# $Id: Makefile.PL 112 2007-02-10 22:37:41Z davidp $
+# $Id: Makefile.PL 194 2008-01-14 22:29:22Z davidp $

@@ -1,6 +1,6 @@
 # Tests for MP3::CreateInlayCard
 #
-# $Id: MP3-CreateInlayCard.t 113 2007-02-10 22:41:56Z davidp $
+# $Id: 1-basic.t 193 2008-01-14 22:22:54Z davidp $
 
 # Before `make install' is performed this script should be runnable with
 # `make test'. After `make install' it should work as `perl MP3-CreateInlayCard.t'
