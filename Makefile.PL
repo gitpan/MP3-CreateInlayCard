@@ -5,11 +5,16 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME              => 'MP3::CreateInlayCard',
     VERSION_FROM      => 'lib/MP3/CreateInlayCard.pm', # finds $VERSION
-    PREREQ_PM         => 
-		{ HTML::Template => 0, MP3::Tag => 0, File::Recurse => 0 },
+    NO_META           => 1,
+    PREREQ_PM         => { 
+		HTML::Template => 0, 
+		MP3::Tag       => 0, 
+		File::Recurse  => 0,
+		Cwd            => 0,
+	},
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/MP3/CreateInlayCard.pm',
        AUTHOR         => 'David Precious <davidp@preshweb.co.uk>') : ()),
 );
 
-# $Id: Makefile.PL 194 2008-01-14 22:29:22Z davidp $
+# $Id: Makefile.PL 277 2008-03-08 23:46:35Z davidp $
