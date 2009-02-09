@@ -3,7 +3,7 @@
 # Simple example to create an inlay card for a given directory, or the current
 # directory if no directory is specified.
 #
-# $Id: createinlay.pl 272 2008-03-08 23:29:51Z davidp $
+# $Id: createinlay.pl 444 2008-09-04 18:55:10Z davidp $
 
 use strict;
 use Cwd;
