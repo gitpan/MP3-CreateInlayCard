@@ -1,13 +1,13 @@
 package MP3::CreateInlayCard;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
-# $Id: CreateInlayCard.pm 527 2009-02-09 20:31:34Z davidp $
+# $Id: CreateInlayCard.pm 532 2009-02-11 10:15:36Z davidp $
 
 use strict;
 use warnings;
 use File::Find::Rule;
-use MP3::Tag;
+use Music::Tag;
 use Cwd;
 use HTML::Template;
 
@@ -106,26 +106,23 @@ sub create_inlay {
     
     for my $file (@files) {
 
-        my $mp3;
-        eval { $mp3 = MP3::Tag->new($file); };
+        my $tags = Music::Tag->new($file, { quiet => 1 });
+        $tags->get_tag or warn "Error reading tags from $file" and next;
 
-        if (!$mp3) { warn "Error reading $file\n"; next; }
-
-
-        my $length = sprintf('%02d',$mp3->total_secs / 60) . ':'
-            . sprintf('%02d',$mp3->total_secs % 60);
+        my $length = sprintf('%02d',$tags->secs / 60) . ':'
+            . sprintf('%02d',$tags->secs % 60);
 
         push @tracks, {
             track => $track,
             title => $params->{prettify} ?
-                _prettify($mp3->title()) : $mp3->title(),
+                _prettify($tags->title()) : $tags->title(),
             artist => $params->{pretify} ?
-                _prettify($mp3->artist()) : $mp3->artist(),
+                _prettify($tags->artist()) : $tags->artist(),
             length => $length,
         };
 
-        $artists{ $mp3->artist() }++;
-        $albums{  $mp3->album()  }++;
+        $artists{ $tags->artist() }++;
+        $albums{  $tags->album()  }++;
         $track++;
     }
 

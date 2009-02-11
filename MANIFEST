@@ -2,7 +2,6 @@ Changes
 Makefile.PL
 MANIFEST
 README
-META.yml
 inlay.tmpl
 test.tmpl
 eg/createinlay.pl
@@ -34,3 +33,4 @@ test-mp3-files/id3v2/one-artist-different-albums/3.mp3
 test-mp3-files/id3v2/one-artist-one-album/1.mp3
 test-mp3-files/id3v2/one-artist-one-album/2.mp3
 test-mp3-files/id3v2/one-artist-one-album/3.mp3
+META.yml                                 Module meta-data (added by MakeMaker)
