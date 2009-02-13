@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               MP3-CreateInlayCard
-version:            0.05
+version:            0.06
 abstract:           create a CD inlay label for a directory of MP3 files
 author:
     - David Precious <davidp@preshweb.co.uk>
@@ -13,6 +13,7 @@ requires:
     File::Find::Rule:  0
     HTML::Template:    0
     Music::Tag:        0
+    Music::Tag::MP3:   0
 no_index:
     directory:
         - t

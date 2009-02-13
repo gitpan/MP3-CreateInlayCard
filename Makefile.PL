@@ -8,6 +8,7 @@ WriteMakefile(
     PREREQ_PM         => {
         'HTML::Template'   => 0,
         'Music::Tag'       => 0,
+        'Music::Tag::MP3'  => 0,
         'File::Find::Rule' => 0,
         'Cwd'              => 0,
     },
@@ -19,4 +20,4 @@ WriteMakefile(
     ($ExtUtils::MakeMaker::VERSION >= 6.3002 ? (LICENSE => "perl") : () ),
 );
 
-# $Id: Makefile.PL 530 2009-02-11 10:09:57Z davidp $
+# $Id: Makefile.PL 535 2009-02-13 23:26:32Z davidp $

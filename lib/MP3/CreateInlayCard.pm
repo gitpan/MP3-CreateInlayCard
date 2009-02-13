@@ -1,8 +1,8 @@
 package MP3::CreateInlayCard;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
-# $Id: CreateInlayCard.pm 532 2009-02-11 10:15:36Z davidp $
+# $Id: CreateInlayCard.pm 535 2009-02-13 23:26:32Z davidp $
 
 use strict;
 use warnings;
